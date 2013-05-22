@@ -1,0 +1,26 @@
+%header
+  %h4 竞价结果
+  .header-left
+    %a(ng-tap="$navigate.go('/bids/list/{{activity_name}}')"  class="btn")
+      返回
+  .header-right
+    %a( ng-tap="$navigate.go('/bids/list/{{activity_name}}')"  class="btn btn-primary")
+      结果统计
+
+
+#wrapper.scrollable
+  %ul.survey-list
+    %li(ng-repeat="bidding in biddings()" )
+      %a
+        %h3 {{bidding}}
+        %p
+#header(ng-switch=true)
+  %input(type="button" ng-tap="$navigate.go('/bids/list/{{activity_name}}')" value="返回" )
+  %a 竞价结果
+  %input(type="button" ng-tap="$navigate.go('/bids/list/{{activity_name}}')" value="结果统计" )
+#wrapper
+  #scroller
+    %ul#bid_result_list
+      %li(ng-repeat="bidding in biddings()")
+        %a {{bidding}}
+

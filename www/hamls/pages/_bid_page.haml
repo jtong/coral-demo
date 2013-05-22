@@ -1,0 +1,23 @@
+%header
+  %h4 竞价
+
+  .header-right
+    %a( ng-tap="end_bid()"  class="btn btn-primary")
+      结束竞价
+
+
+#wrapper.scrollable
+  %ul.survey-list
+    %li(ng-repeat="bidding in biddings" )
+      %a(ng-tap="$navigate.go('/bids/result/{{activity_name}}/{{bid}}')")
+        %h3 {{bidding}}
+        %p
+
+%footer
+  %ul(class="footer-nav footer-nav-2tabs" )
+    %li
+      %a(ng-tap="$navigate.go('/sign_ups/list/{{activity_name}}')")
+        %h5 报名
+    %li
+      %a.active(ng-tap ="$navigate.go('/bids/list/{{activity_name}}')")
+        %h5 竞价

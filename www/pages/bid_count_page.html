@@ -1,0 +1,37 @@
+<header>
+  <h4>报名</h4>
+  <div class='header-left'>
+    <a class='btn' ng-tap="$navigate.go('/bids/list/{{activity_name}}')">
+      返回
+    </a>
+  </div>
+  <div class='header-right'>
+    <a class='btn btn-primary' ng-tap="$navigate.go('/bids/result/{{activity_name}}/{{bid_name}}')">
+      结果列表
+    </a>
+  </div>
+</header>
+<div class='scrollable' id='wrapper'>
+  <ul class='survey-list'>
+    <li ng-repeat='num_of_price_item in num_of_price_items()'>
+      <a>
+        <h3>{{num_of_price_item}}</h3>
+        <p></p>
+      </a>
+    </li>
+  </ul>
+</div>
+<footer>
+  <ul class='footer-nav footer-nav-2tabs'>
+    <li>
+      <a ng-tap="$navigate.go('/sign_ups/list/{{activity_name}}')">
+        <h5>报名</h5>
+      </a>
+    </li>
+    <li>
+      <a class='active' ng-tap="$navigate.go('/bids/list/{{activity_name}}')">
+        <h5>竞价</h5>
+      </a>
+    </li>
+  </ul>
+</footer>

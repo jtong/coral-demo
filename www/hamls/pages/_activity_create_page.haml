@@ -1,0 +1,13 @@
+%header
+  %h4 创建活动
+  .header-left
+    %a(ng-tap = "$navigate.go('/', 'slide')"  class="btn btn-primary")
+      %i.icon-arrow-left
+        返回
+
+#wrapper.scrollable
+  %form.wrapper-inner
+    %fieldset.form-wrapper
+      %h5 活动名称
+      %input#activity_name.input-full(type="text" placeholder="活动名称不能为空")
+      %a.btn.btn-block.btn-large(ng-tap="create_activity()") 创建

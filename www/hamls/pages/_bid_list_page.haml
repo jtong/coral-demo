@@ -1,0 +1,26 @@
+%header
+  %h4 竞价
+  .header-left
+    %a(ng-tap="$navigate.go('/', 'slide')"  class="btn")
+      返回
+
+  .header-right
+    %a( ng-tap="start_bid()"  class="btn btn-primary")
+      开始竞价
+
+
+#wrapper.scrollable
+  %ul.survey-list
+    %li(ng-repeat="bid in bids" )
+      %a(ng-tap="$navigate.go('/bids/result/{{activity_name}}/{{bid}}')")
+        %h3 {{bid}}
+        %p
+
+%footer
+  %ul(class="footer-nav footer-nav-2tabs" )
+    %li
+      %a(ng-tap="$navigate.go('/sign_ups/list/{{activity_name}}')")
+        %h5 报名
+    %li
+      %a.active(ng-tap ="$navigate.go('/bids/list/{{activity_name}}')")
+        %h5 竞价

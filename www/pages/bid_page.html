@@ -1,0 +1,32 @@
+<header>
+  <h4>竞价</h4>
+  <div class='header-right'>
+    <a class='btn btn-primary' ng-tap='end_bid()'>
+      结束竞价
+    </a>
+  </div>
+</header>
+<div class='scrollable' id='wrapper'>
+  <ul class='survey-list'>
+    <li ng-repeat='bidding in biddings'>
+      <a ng-tap="$navigate.go('/bids/result/{{activity_name}}/{{bid}}')">
+        <h3>{{bidding}}</h3>
+        <p></p>
+      </a>
+    </li>
+  </ul>
+</div>
+<footer>
+  <ul class='footer-nav footer-nav-2tabs'>
+    <li>
+      <a ng-tap="$navigate.go('/sign_ups/list/{{activity_name}}')">
+        <h5>报名</h5>
+      </a>
+    </li>
+    <li>
+      <a class='active' ng-tap="$navigate.go('/bids/list/{{activity_name}}')">
+        <h5>竞价</h5>
+      </a>
+    </li>
+  </ul>
+</footer>

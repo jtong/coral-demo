@@ -1,0 +1,42 @@
+<header ng-switch on='sign_up_status()'>
+  <h4>报名</h4>
+  <div class='header-right' ng-switch-when='started'>
+    <a class='btn btn-primary' ng-tap='end_apply()'>
+      结束报名
+    </a>
+  </div>
+  <div class='header-right' ng-switch-default>
+    <a class='btn btn-primary' ng-tap='start_apply()'>
+      开始报名
+    </a>
+  </div>
+  <div class='header-left'>
+    <a class='btn' ng-tap="$navigate.go('/', 'slide')">
+      返回
+    </a>
+  </div>
+</header>
+<div class='scrollable' id='wrapper'>
+  <ul class='survey-list'>
+    <li ng-repeat='player in players'>
+      <a>
+        <h3>{{player}}</h3>
+        <p></p>
+      </a>
+    </li>
+  </ul>
+</div>
+<footer>
+  <ul class='footer-nav footer-nav-2tabs'>
+    <li>
+      <a class='active' ng-tap="$navigate.go('/sign_ups/list/{{activity_name}}')">
+        <h5>报名</h5>
+      </a>
+    </li>
+    <li>
+      <a ng-tap="$navigate.go('/bids/list/{{activity_name}}')">
+        <h5>竞价</h5>
+      </a>
+    </li>
+  </ul>
+</footer>

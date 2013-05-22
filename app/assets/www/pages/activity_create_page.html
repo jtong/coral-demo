@@ -1,0 +1,19 @@
+<header>
+  <h4>创建活动</h4>
+  <div class='header-left'>
+    <a class='btn btn-primary' ng-tap="$navigate.go('/', 'slide')">
+      <i class='icon-arrow-left'>
+        返回
+      </i>
+    </a>
+  </div>
+</header>
+<div class='scrollable' id='wrapper'>
+  <form class='wrapper-inner'>
+    <fieldset class='form-wrapper'>
+      <h5>活动名称</h5>
+      <input class='input-full' id='activity_name' placeholder='活动名称不能为空' type='text'>
+      <a class='btn btn-block btn-large' ng-tap='create_activity()'>创建</a>
+    </fieldset>
+  </form>
+</div>

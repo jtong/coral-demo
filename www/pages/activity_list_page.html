@@ -1,0 +1,19 @@
+<header>
+  <h4>活动列表</h4>
+  <div class='header-right'>
+    <a class='btn btn-primary' ng-tap="$navigate.go('/activity/create', 'slide')">
+      创建活动
+    </a>
+  </div>
+</header>
+<div class='scrollable' id='wrapper'>
+  <ul class='survey-list'>
+    <li ng-repeat='activity in activities()'>
+      <a ng-tap="$navigate.go('/sign_ups/list/{{activity}}', 'slide', true)">
+        <h3>{{activity}}</h3>
+        <p></p>
+        <i class='icon-angle-right'></i>
+      </a>
+    </li>
+  </ul>
+</div>

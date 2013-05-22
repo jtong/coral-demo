@@ -1,0 +1,13 @@
+%header
+  %h4 活动列表
+  .header-right
+    %a(ng-tap="$navigate.go('/activity/create', 'slide')"  class="btn btn-primary")
+      创建活动
+
+#wrapper.scrollable
+  %ul.survey-list
+    %li(ng-repeat="activity in activities()" )
+      %a(ng-tap="$navigate.go('/sign_ups/list/{{activity}}', 'slide', true)")
+        %h3 {{activity}}
+        %p
+        %i.icon-angle-right
